@@ -14,27 +14,6 @@ def sum_prod(data: MatrixVectorBatchInput) -> np.ndarray:
 
     return sum
 
-data = MatrixVectorBatchInput(
-    matrices = np.array([
-        [[1, 2],
-        [3, 4]],
-
-        [[0, 1],
-        [1, 0]],
-    ]),  # форма (2, 2, 2)
-
-    vectors = np.array([
-        [[1],
-        [2]],
-
-        [[3],
-        [4]],
-    ])  # форма (2, 2, 1)
-)
-
-sum_prod(data)
-
-
 def binarize(data: BinarizeInput) -> np.ndarray:
     matrix, threshold = data.matrix, data.threshold
 
@@ -53,18 +32,6 @@ def unique_rows(data: MatrixInput) -> list[list[float]]:
         rows.append(uniqueNums)
 
     return rows
-
-data1 = MatrixInput(
-    matrix=np.array([
-        [1, 1, 2],
-        [5, 4, 1],
-    ])
-)
-
-unique_rows(data1)
-
-
-
 
 def unique_columns(data: MatrixInput) -> list[list[float]]:
     matrix = data.matrix

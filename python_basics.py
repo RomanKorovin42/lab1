@@ -28,8 +28,6 @@ def has_unique_characters(data: TextInput) -> bool:
     return True
 
     
-
-
 def count_one_bits(data: PositiveIntegerInput) -> int:
 
     def getBit(number):
